@@ -1,0 +1,4 @@
+C:\$projects\xtag\bin\xtag.dll
+C:\$projects\xtag\bin\zxcore.dll
+C:\$projects\xtag\obj\Release\xtag.vbprojResolveAssemblyReference.cache
+C:\$projects\xtag\obj\Release\xtag.dll
