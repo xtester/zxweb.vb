@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{DF61DBBE-15CF-4EF0-A052-F59D0DB6E914}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <MyType>Windows</MyType>
+    <AssemblyName>xtag</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <OptionInfer>On</OptionInfer>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <OptionStrict>Off</OptionStrict>
+    <OptionCompare>Binary</OptionCompare>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <NoWarn>42016,42017,42019,41999</NoWarn>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <Prefer32Bit>False</Prefer32Bit>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <DefineConstants>DEBUG=1,TRACE=1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <DefineConstants>TRACE=1</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.vb" />
+    <Compile Include="src\AutodirConverter.vb" />
+    <Compile Include="src\base\AbstractTag.vb" />
+    <Compile Include="src\base\ConverterBase.vb" />
+    <Compile Include="src\base\EnumArgType.vb" />
+    <Compile Include="src\base\EscapedTagInfo.vb" />
+    <Compile Include="src\base\HtmlConverter.vb" />
+    <Compile Include="src\base\OtherTags.vb" />
+    <Compile Include="src\base\PostWorker.vb" />
+    <Compile Include="src\base\TextTransformer.vb" />
+    <Compile Include="src\base\TextTransformerFactory.vb" />
+    <Compile Include="src\base\XTag.vb" />
+    <Compile Include="src\base\XTagConverter.vb" />
+    <Compile Include="src\base\XTransformer.vb" />
+    <Compile Include="src\BlankConverter.vb" />
+    <Compile Include="src\BookConverter.vb" />
+    <Compile Include="src\BreakLineConverter.vb" />
+    <Compile Include="src\CodeConverter.vb" />
+    <Compile Include="src\CommentConverters.vb" />
+    <Compile Include="src\CssClassConverter.vb" />
+    <Compile Include="src\DotLineConverter.vb" />
+    <Compile Include="src\DownloadConverter.vb" />
+    <Compile Include="src\HrConverter.vb" />
+    <Compile Include="src\ImgConverter.vb" />
+    <Compile Include="src\imgex.vb" />
+    <Compile Include="src\IncludeConverter.vb" />
+    <Compile Include="src\IndentConverter.vb" />
+    <Compile Include="src\interface\ITextTransformer.vb" />
+    <Compile Include="src\interface\ITextTransformerFactory.vb" />
+    <Compile Include="src\LineListConverter.vb" />
+    <Compile Include="src\LinkMarkConverter.vb" />
+    <Compile Include="src\NoteConverter.vb" />
+    <Compile Include="src\RefConverter.vb" />
+    <Compile Include="src\Section2Converter.vb" />
+    <Compile Include="src\SectionConverters.vb" />
+    <Compile Include="src\SNameConverter.vb" />
+    <Compile Include="src\SublinkConverter.vb" />
+    <Compile Include="src\SubtitleConverter.vb" />
+    <Compile Include="src\SvgConverter.vb" />
+    <Compile Include="src\WikipediaConverter.vb" />
+    <Compile Include="src\XResourceConverter.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src" />
+    <Folder Include="src\base" />
+    <Folder Include="src\interface" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\zxcore\zxcore.vbproj">
+      <Project>{F8D1D809-B848-4FE8-98A6-5F56E977F4AE}</Project>
+      <Name>zxcore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="zx.common" />
+    <Import Include="zxweb.core" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>C:
+cd \$projects\zxweb\_msbuild
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\msbuild</PostBuildEvent>
+  </PropertyGroup>
+</Project>
