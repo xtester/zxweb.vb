@@ -100,12 +100,6 @@
     <Folder Include="src\interface" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\zxcore\zxcore.vbproj">
-      <Project>{F8D1D809-B848-4FE8-98A6-5F56E977F4AE}</Project>
-      <Name>zxcore</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
@@ -113,6 +107,12 @@
     <Import Include="System.Diagnostics" />
     <Import Include="zx.common" />
     <Import Include="zxweb.core" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\zxcore\zxcore.vbproj">
+      <Project>{F8D1D809-B848-4FE8-98A6-5F56E977F4AE}</Project>
+      <Name>zxcore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>

@@ -55,7 +55,7 @@ Private Function parseTop(ins As String) As String
 					"key" & i, strlist(0), "value" & i, strlist(1))
 				
 				Dim hashkey As String = ""
-				Select Case strlist(0)
+				Select Case CStr(strlist(0))
 					Case "ie"
 						hashkey = "MSIE"
 					Case "ff"
