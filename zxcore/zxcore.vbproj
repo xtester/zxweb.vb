@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{F8D1D809-B848-4FE8-98A6-5F56E977F4AE}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <MyType>Windows</MyType>
+    <AssemblyName>zxcore</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <OptionInfer>On</OptionInfer>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <OptionStrict>Off</OptionStrict>
+    <OptionCompare>Binary</OptionCompare>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\czh\AppData\Roaming\ICSharpCode/SharpDevelop4\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <NoWarn>42016,42017,42019,41999</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <Prefer32Bit>False</Prefer32Bit>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <DefineConstants>DEBUG=1,TRACE=1</DefineConstants>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <DefineConstants>TRACE=1</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ajax\AjaxContext.vb" />
+    <Compile Include="ajax\AjaxDecoratorFactory.vb" />
+    <Compile Include="ajax\AjaxGateway.vb" />
+    <Compile Include="ajax\AjaxHelper.vb" />
+    <Compile Include="ajax\AjaxPage.vb" />
+    <Compile Include="common\Icons.vb" />
+    <Compile Include="common\IObjectMeta.vb" />
+    <Compile Include="common\MyArrayList.vb" />
+    <Compile Include="common\MyNameValueCollection.vb" />
+    <Compile Include="common\ObjectFactory.vb" />
+    <Compile Include="common\time.vb" />
+    <Compile Include="common\tracer\HtmlTraceWriter.vb" />
+    <Compile Include="common\tracer\ITraceManager.vb" />
+    <Compile Include="common\tracer\PlainTextTraceWriter.vb" />
+    <Compile Include="common\tracer\TMsgException.vb" />
+    <Compile Include="common\tracer\TraceFilter.vb" />
+    <Compile Include="common\tracer\TraceMessage.vb" />
+    <Compile Include="common\tracer\TraceWriter.vb" />
+    <Compile Include="common\tracer\XTrace.vb" />
+    <Compile Include="common\Util.vb" />
+    <Compile Include="common\XmlFile.vb" />
+    <Compile Include="controls\ControlBase.vb" />
+    <Compile Include="controls\ControlContext.vb" />
+    <Compile Include="controls\HtmlHeadLoader.vb" />
+    <Compile Include="controls\IControls.vb" />
+    <Compile Include="controls\PostControlBase.vb" />
+    <Compile Include="controls\treeview\AjaxAdapterTreeView.vb" />
+    <Compile Include="controls\treeview\domain\ArticleDirectory.vb" />
+    <Compile Include="controls\treeview\domain\ITreeSource.vb" />
+    <Compile Include="controls\treeview\domain\SrcNodeBase.vb" />
+    <Compile Include="controls\treeview\domain\SrcNodeCustom.vb" />
+    <Compile Include="controls\treeview\domain\SrcNodeEx.vb" />
+    <Compile Include="controls\treeview\domain\TreeNode.vb" />
+    <Compile Include="controls\treeview\domain\XmlSrcNode.vb" />
+    <Compile Include="controls\treeview\TreeBrowser.vb" />
+    <Compile Include="controls\XControl.vb" />
+    <Compile Include="core\AppHome.vb" />
+    <Compile Include="core\ControlsConfig.vb" />
+    <Compile Include="core\IAppCenter.vb" />
+    <Compile Include="core\ILibCore.vb" />
+    <Compile Include="core\IMetaProvider.vb" />
+    <Compile Include="core\LoginCookie.vb" />
+    <Compile Include="core\MemberConfig.vb" />
+    <Compile Include="core\ResourceMetaManager.vb" />
+    <Compile Include="core\SysConfig.vb" />
+    <Compile Include="data\CacheFile.vb" />
+    <Compile Include="data\DatabaseSystemProfile.vb" />
+    <Compile Include="data\DataFile.vb" />
+    <Compile Include="data\DataRecord.vb" />
+    <Compile Include="data\db.vb" />
+    <Compile Include="data\LocationRecord.vb" />
+    <Compile Include="domain\ControlLoader.vb" />
+    <Compile Include="domain\IComment.vb" />
+    <Compile Include="domain\ICommentResource.vb" />
+    <Compile Include="domain\IContentProvider.vb" />
+    <Compile Include="domain\IFactoryResource.vb" />
+    <Compile Include="domain\IResourceProcessor.vb" />
+    <Compile Include="domain\IWebResource.vb" />
+    <Compile Include="domain\TemplateFactory.vb" />
+    <Compile Include="domain\XSession.vb" />
+    <Compile Include="pages\ActionFile.vb" />
+    <Compile Include="pages\ActionHandlingException.vb" />
+    <Compile Include="pages\ControllerBase.vb" />
+    <Compile Include="pages\EntryPage.vb" />
+    <Compile Include="pages\IController.vb" />
+    <Compile Include="pages\PageBase.vb" />
+    <Compile Include="pages\PagePart.vb" />
+    <Compile Include="pages\PlaceHolder.vb" />
+    <Compile Include="pages\TabDecorator.vb" />
+    <Compile Include="pages\ViewManager.vb" />
+    <Compile Include="pages\XPage.vb" />
+    <Compile Include="Properties\AssemblyInfo.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ajax" />
+    <Folder Include="common" />
+    <Folder Include="common\tracer" />
+    <Folder Include="controls" />
+    <Folder Include="controls\treeview" />
+    <Folder Include="controls\treeview\domain" />
+    <Folder Include="core" />
+    <Folder Include="data" />
+    <Folder Include="domain" />
+    <Folder Include="pages" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Data" />
+    <Import Include="System.IO" />
+    <Import Include="System.Text" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Xml" />
+    <Import Include="zx" />
+    <Import Include="zx.common" />
+    <Import Include="zx.common.xml" />
+    <Import Include="zxweb" />
+    <Import Include="zxweb.core" />
+    <Import Include="zxweb.data" />
+    <Import Include="zxweb.domain" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>C:
+cd \$projects\zxweb\_msbuild
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\msbuild</PostBuildEvent>
+  </PropertyGroup>
+</Project>
