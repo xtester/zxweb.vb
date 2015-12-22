@@ -1,3 +1,6 @@
 C:\$projects\zxcore\bin\zxcore.dll
 C:\$projects\zxcore\obj\Release\zxcore.vbprojResolveAssemblyReference.cache
 C:\$projects\zxcore\obj\Release\zxcore.dll
+C:\$projects\GitHub\zxweb.vb\zxcore\bin\zxcore.dll
+C:\$projects\GitHub\zxweb.vb\zxcore\obj\Release\zxcore.vbprojResolveAssemblyReference.cache
+C:\$projects\GitHub\zxweb.vb\zxcore\obj\Release\zxcore.dll

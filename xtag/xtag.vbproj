@@ -109,7 +109,7 @@
     <Import Include="zxweb.core" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\zxcore\zxcore.vbproj">
+    <ProjectReference Include="..\zxcore\zxcore.vbproj">
       <Project>{F8D1D809-B848-4FE8-98A6-5F56E977F4AE}</Project>
       <Name>zxcore</Name>
     </ProjectReference>

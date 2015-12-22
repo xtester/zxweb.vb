@@ -23,6 +23,7 @@
     <RunCodeAnalysis>False</RunCodeAnalysis>
     <SourceAnalysisOverrideSettingsFile>C:\Users\czh\AppData\Roaming\ICSharpCode/SharpDevelop4\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
     <NoWarn>42016,42017,42019,41999</NoWarn>
+    <OptionExplicit>On</OptionExplicit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -57,90 +58,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ajax\AjaxContext.vb" />
-    <Compile Include="ajax\AjaxDecoratorFactory.vb" />
-    <Compile Include="ajax\AjaxGateway.vb" />
-    <Compile Include="ajax\AjaxHelper.vb" />
-    <Compile Include="ajax\AjaxPage.vb" />
-    <Compile Include="common\Icons.vb" />
-    <Compile Include="common\IObjectMeta.vb" />
-    <Compile Include="common\MyArrayList.vb" />
-    <Compile Include="common\MyNameValueCollection.vb" />
-    <Compile Include="common\ObjectFactory.vb" />
-    <Compile Include="common\time.vb" />
-    <Compile Include="common\tracer\HtmlTraceWriter.vb" />
-    <Compile Include="common\tracer\ITraceManager.vb" />
-    <Compile Include="common\tracer\PlainTextTraceWriter.vb" />
-    <Compile Include="common\tracer\TMsgException.vb" />
-    <Compile Include="common\tracer\TraceFilter.vb" />
-    <Compile Include="common\tracer\TraceMessage.vb" />
-    <Compile Include="common\tracer\TraceWriter.vb" />
-    <Compile Include="common\tracer\XTrace.vb" />
-    <Compile Include="common\Util.vb" />
-    <Compile Include="common\XmlFile.vb" />
-    <Compile Include="controls\ControlBase.vb" />
-    <Compile Include="controls\ControlContext.vb" />
-    <Compile Include="controls\HtmlHeadLoader.vb" />
-    <Compile Include="controls\IControls.vb" />
-    <Compile Include="controls\PostControlBase.vb" />
-    <Compile Include="controls\treeview\AjaxAdapterTreeView.vb" />
-    <Compile Include="controls\treeview\domain\ArticleDirectory.vb" />
-    <Compile Include="controls\treeview\domain\ITreeSource.vb" />
-    <Compile Include="controls\treeview\domain\SrcNodeBase.vb" />
-    <Compile Include="controls\treeview\domain\SrcNodeCustom.vb" />
-    <Compile Include="controls\treeview\domain\SrcNodeEx.vb" />
-    <Compile Include="controls\treeview\domain\TreeNode.vb" />
-    <Compile Include="controls\treeview\domain\XmlSrcNode.vb" />
-    <Compile Include="controls\treeview\TreeBrowser.vb" />
-    <Compile Include="controls\XControl.vb" />
-    <Compile Include="core\AppHome.vb" />
-    <Compile Include="core\ControlsConfig.vb" />
-    <Compile Include="core\IAppCenter.vb" />
-    <Compile Include="core\ILibCore.vb" />
-    <Compile Include="core\IMetaProvider.vb" />
-    <Compile Include="core\LoginCookie.vb" />
-    <Compile Include="core\MemberConfig.vb" />
-    <Compile Include="core\ResourceMetaManager.vb" />
-    <Compile Include="core\SysConfig.vb" />
-    <Compile Include="data\CacheFile.vb" />
-    <Compile Include="data\DatabaseSystemProfile.vb" />
-    <Compile Include="data\DataFile.vb" />
-    <Compile Include="data\DataRecord.vb" />
-    <Compile Include="data\db.vb" />
-    <Compile Include="data\LocationRecord.vb" />
-    <Compile Include="domain\ControlLoader.vb" />
-    <Compile Include="domain\IComment.vb" />
-    <Compile Include="domain\ICommentResource.vb" />
-    <Compile Include="domain\IContentProvider.vb" />
-    <Compile Include="domain\IFactoryResource.vb" />
-    <Compile Include="domain\IResourceProcessor.vb" />
-    <Compile Include="domain\IWebResource.vb" />
-    <Compile Include="domain\TemplateFactory.vb" />
-    <Compile Include="domain\XSession.vb" />
-    <Compile Include="pages\ActionFile.vb" />
-    <Compile Include="pages\ActionHandlingException.vb" />
-    <Compile Include="pages\ControllerBase.vb" />
-    <Compile Include="pages\EntryPage.vb" />
-    <Compile Include="pages\IController.vb" />
-    <Compile Include="pages\PageBase.vb" />
-    <Compile Include="pages\PagePart.vb" />
-    <Compile Include="pages\PlaceHolder.vb" />
-    <Compile Include="pages\TabDecorator.vb" />
-    <Compile Include="pages\ViewManager.vb" />
-    <Compile Include="pages\XPage.vb" />
     <Compile Include="Properties\AssemblyInfo.vb" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ajax" />
-    <Folder Include="common" />
-    <Folder Include="common\tracer" />
-    <Folder Include="controls" />
-    <Folder Include="controls\treeview" />
-    <Folder Include="controls\treeview\domain" />
-    <Folder Include="core" />
-    <Folder Include="data" />
-    <Folder Include="domain" />
-    <Folder Include="pages" />
+    <Compile Include="src\ajax\AjaxContext.vb" />
+    <Compile Include="src\ajax\AjaxDecoratorFactory.vb" />
+    <Compile Include="src\ajax\AjaxGateway.vb" />
+    <Compile Include="src\ajax\AjaxHelper.vb" />
+    <Compile Include="src\ajax\AjaxPage.vb" />
+    <Compile Include="src\common\Icons.vb" />
+    <Compile Include="src\common\IObjectMeta.vb" />
+    <Compile Include="src\common\MyArrayList.vb" />
+    <Compile Include="src\common\MyNameValueCollection.vb" />
+    <Compile Include="src\common\ObjectFactory.vb" />
+    <Compile Include="src\common\time.vb" />
+    <Compile Include="src\common\tracer\HtmlTraceWriter.vb" />
+    <Compile Include="src\common\tracer\ITraceManager.vb" />
+    <Compile Include="src\common\tracer\PlainTextTraceWriter.vb" />
+    <Compile Include="src\common\tracer\TMsgException.vb" />
+    <Compile Include="src\common\tracer\TraceFilter.vb" />
+    <Compile Include="src\common\tracer\TraceMessage.vb" />
+    <Compile Include="src\common\tracer\TraceWriter.vb" />
+    <Compile Include="src\common\tracer\XTrace.vb" />
+    <Compile Include="src\common\Util.vb" />
+    <Compile Include="src\common\XmlFile.vb" />
+    <Compile Include="src\controls\ControlBase.vb" />
+    <Compile Include="src\controls\ControlContext.vb" />
+    <Compile Include="src\controls\HtmlHeadLoader.vb" />
+    <Compile Include="src\controls\IControls.vb" />
+    <Compile Include="src\controls\PostControlBase.vb" />
+    <Compile Include="src\controls\treeview\AjaxAdapterTreeView.vb" />
+    <Compile Include="src\controls\treeview\domain\ArticleDirectory.vb" />
+    <Compile Include="src\controls\treeview\domain\ITreeSource.vb" />
+    <Compile Include="src\controls\treeview\domain\SrcNodeBase.vb" />
+    <Compile Include="src\controls\treeview\domain\SrcNodeCustom.vb" />
+    <Compile Include="src\controls\treeview\domain\SrcNodeEx.vb" />
+    <Compile Include="src\controls\treeview\domain\TreeNode.vb" />
+    <Compile Include="src\controls\treeview\domain\XmlSrcNode.vb" />
+    <Compile Include="src\controls\treeview\TreeBrowser.vb" />
+    <Compile Include="src\controls\XControl.vb" />
+    <Compile Include="src\core\AppHome.vb" />
+    <Compile Include="src\core\ControlsConfig.vb" />
+    <Compile Include="src\core\IAppCenter.vb" />
+    <Compile Include="src\core\ILibCore.vb" />
+    <Compile Include="src\core\IMetaProvider.vb" />
+    <Compile Include="src\core\LoginCookie.vb" />
+    <Compile Include="src\core\MemberConfig.vb" />
+    <Compile Include="src\core\ResourceMetaManager.vb" />
+    <Compile Include="src\core\SysConfig.vb" />
+    <Compile Include="src\data\CacheFile.vb" />
+    <Compile Include="src\data\DatabaseSystemProfile.vb" />
+    <Compile Include="src\data\DataFile.vb" />
+    <Compile Include="src\data\DataRecord.vb" />
+    <Compile Include="src\data\db.vb" />
+    <Compile Include="src\data\LocationRecord.vb" />
+    <Compile Include="src\domain\ControlLoader.vb" />
+    <Compile Include="src\domain\IComment.vb" />
+    <Compile Include="src\domain\ICommentResource.vb" />
+    <Compile Include="src\domain\IContentProvider.vb" />
+    <Compile Include="src\domain\IFactoryResource.vb" />
+    <Compile Include="src\domain\IResourceProcessor.vb" />
+    <Compile Include="src\domain\IWebResource.vb" />
+    <Compile Include="src\domain\TemplateFactory.vb" />
+    <Compile Include="src\domain\XSession.vb" />
+    <Compile Include="src\pages\ActionFile.vb" />
+    <Compile Include="src\pages\ActionHandlingException.vb" />
+    <Compile Include="src\pages\ControllerBase.vb" />
+    <Compile Include="src\pages\EntryPage.vb" />
+    <Compile Include="src\pages\IController.vb" />
+    <Compile Include="src\pages\PageBase.vb" />
+    <Compile Include="src\pages\PagePart.vb" />
+    <Compile Include="src\pages\PlaceHolder.vb" />
+    <Compile Include="src\pages\TabDecorator.vb" />
+    <Compile Include="src\pages\ViewManager.vb" />
+    <Compile Include="src\pages\XPage.vb" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -163,6 +152,19 @@
     <Import Include="zxweb.core" />
     <Import Include="zxweb.data" />
     <Import Include="zxweb.domain" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src" />
+    <Folder Include="src\ajax" />
+    <Folder Include="src\common" />
+    <Folder Include="src\common\tracer" />
+    <Folder Include="src\controls" />
+    <Folder Include="src\controls\treeview" />
+    <Folder Include="src\controls\treeview\domain" />
+    <Folder Include="src\core" />
+    <Folder Include="src\data" />
+    <Folder Include="src\domain" />
+    <Folder Include="src\pages" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
